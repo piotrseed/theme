@@ -1,11 +1,11 @@
 // out: style.css
 /*
-Theme Name: SL Boguchwała
+Theme Name: LIMET
 Theme URI: http://bigcom.pl
 Author: Piotr Sędek
 Author URI: mailto:piotrseed@gmail.com
-Description: Dedykowany szablon dla SL Boguchwała
-Text Domain: boguchwala
+Description: Dedykowany szablon dla LIMET
+Text Domain: limet
 */
 // FOR LESS
 @phone: ~"only screen and (max-width:500px)";
@@ -24,4 +24,377 @@ Text Domain: boguchwala
   outline: 0;
 }
 @import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Noto+Serif:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900");
+//font-family: 'Noto Serif', serif;
+//font-family: 'Lato', sans-serif;
+
+body,
+html {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #ffffff;
+  color: #352B2C;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+p {
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.header {
+  display: block;
+  position: relative;
+}
+
+.wrapp {
+  max-width: 1170px;
+  width: 95%;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  @media @largepc, @smallpc {
+    width: 200px;
+  }
+  @media @tablet, @phone {
+    width: 160px;
+  }
+}
+
+.fa-bars {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 30px;
+  @media @largepc, @smallpc, @tablet, @phone {
+    display: inline-block;
+  }
+  @media @phone {
+    margin: 0 10px 0 0;
+  }
+}
+
+.header_menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 30px;
+
+  ul {
+    width: auto;
+    padding: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    @media @largepc, @smallpc, @tablet, @phone {
+      display: flex;
+    }
+  }
+}
+
+#menu-top {
+  display: flex;
+  color: #ffffff;
+  justify-content: flex-end;
+  align-items: center;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+
+        img {
+          display: inline-block;
+          @media @phone {
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  ul:nth-child(1) {
+    @media @smallpc, @tablet, @phone {
+      //display: none;
+    }
+  }
+
+  ul:nth-child(2) {
+    margin-left: 10px;
+    font-weight: 400;
+    position: relative;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 20px;
+    border-left: 1px solid #576b99;
+    @media @tablet {
+      border: none;
+    }
+    @media @phone {
+      display: none;
+    }
+  }
+
+  ul:nth-child(3) {
+    margin: 0 5px 0 0;
+    padding: 0 0 0 10px;
+    @media @largepc, @smallpc, @tablet {
+      margin: 0 20px;
+      padding: 0;
+    }
+    @media @phone {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  display: block;
+  margin: 10px 0 0;
+  z-index: 200;
+  @media @smallpc, @tablet, @phone {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 70px;
+    right: 0;
+    min-width: 200px;
+    width: auto;
+    max-width: 400px;
+  }
+
+  ul {
+    display: block;
+
+    li {
+      width: auto;
+      display: inline-block;
+      position: relative;
+      @media @smallpc, @tablet, @phone {
+        display: block;
+        padding: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 0 10px 10px;
+        display: block;
+        color: #ffffff;
+        @media @smallpc, @tablet, @phone {
+          color: #000000;
+        }
+
+        &:hover {
+          border-bottom: 2px solid #f36523;
+          @media @smallpc, @tablet, @phone {
+            border: none;
+          }
+        }
+      }
+
+      & > ul {
+        display: none;
+
+        li {
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+
+      &:hover > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.slider-content {
+  position: absolute;
+  z-index: 110;
+  width: 100%;
+  bottom: 55%;
+  margin: 0 auto;
+  font-weight: 300;
+  @media @smallpc, @tablet, @phone {
+    top: 40%;
+  }
+
+  P {
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+  }
+
+  p:nth-child(1) {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    @media @tablet, @phone {
+      font-size: 7vw;
+      margin-bottom: 15px;
+    }
+  }
+
+  p:nth-child(2) {
+    font-size: 18px;
+    @media @tablet, @phone {
+      font-size: 3vw;
+    }
+  }
+}
+
+.rslides_tabs {
+  top: 40%;
+}
+
+.prev {
+  left: 260px;
+  display: none;
+  width: 25px;
+  height: 20px;
+  margin-top: 5px;
+  background-image: url("./assets/images/left-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.next {
+  left: 410px;
+  display: none;
+  width: 25px;
+  height: 20px;
+  margin-top: 5px;
+  background-image: url("./assets/images/right-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media @smallpc, @tablet, @phone {
+  .rslides_tabs {
+    left: auto;
+    right: auto;
+    display: block;
+    margin: 0 auto;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .prev {
+    left: auto;
+    right: 180px;
+    top: 90%;
+  }
+
+  .next {
+    left: auto;
+    right: 40px;
+    top: 90%;
+  }
+}
+
+#top-slider {
+  li {
+    .wrapp {
+      display: block;
+      position: absolute;
+      z-index: 6;
+    }
+
+    a {
+      position: absolute;
+      font-family: 'Noto Serif', serif;
+      color: #d7b168;
+      border: 2px solid #d7b168;
+      padding: 12px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 190;
+      @media @phone {
+        font-size: 3.5vw;
+        padding: 2vw 20px;
+      }
+    }
+  }
+}
+
+.filtr1 {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+}
+
+.sub-menu {
+  display: block;
+  min-width: 280px;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  z-index: 200;
+  padding: 10px;
+  border-bottom: 3px solid #E3E3E3;
+  @media @smallpc, @tablet, @phone {
+    position: relative;
+    border-top: 1px solid #E3E3E3;
+    padding: 10px 0;
+  }
+
+  li {
+    display: block !important;
+    margin: 10px;
+    @media @smallpc, @tablet, @phone {
+      margin: 0 10px;
+      padding: 0 0 10px;
+    }
+
+    a {
+      color: #000000 !important;
+      padding: 10px !important;
+
+      &:hover {
+        background: #eeeeee;
+      }
+    }
+  }
+}
+
+#mapa {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
