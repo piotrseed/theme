@@ -1,0 +1,191 @@
+/////////////////////////////////////////////////////////
+
+.textaFormat {
+  margin: 20px 0;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  table {
+    margin: 0;
+    width: 100%;
+    margin: 20px 0;
+
+    tbody {
+      tr {
+        padding: 10px 0;
+
+        td {
+          @media @phone {
+            width: 100% !important;
+          }
+        }
+
+        td:nth-child(1) {
+          padding: 0 10px;
+        }
+
+        td,
+        td:nth-child(2) {
+          padding: 5px;
+        }
+      }
+
+      tr:nth-child(even) {
+        background: #F5F5F5;
+      }
+
+      tr:nth-child(1) {
+        font-weight: 600;
+      }
+    }
+  }
+
+  ul {
+    margin: 20px 0 20px 20px;
+
+    li {
+      list-style: none;
+      position: relative;
+
+      &::before {
+        content: "•";
+        top: -3px;
+        left: -15px;
+        position: absolute;
+        font-size: 30px;
+        color: #1D1F21;
+        //https://www.w3schools.com/charsets/ref_utf_punctuation.asp
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////
+
+.menu-right {
+  //background:#979a91;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  img {
+    max-width: 200px;
+    min-width: 100px;
+    display: block;
+    //background: #71746B;
+    @media @smallpc, @tablet, @phone {
+      width: 20vw;
+    }
+  }
+
+  div {
+    //background: #555751;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    width: 100%;
+    top: 10%;
+    @media @smallpc, @tablet, @phone {
+      flex-flow: row nowrap;
+      width: auto;
+    }
+
+    &:nth-child(1) {
+      align-items: center;
+      margin-right: 10px;
+      @media @phone {
+        display: none;
+      }
+    }
+  }
+
+  i {
+    font-size: 32px;
+    display: none;
+    cursor: pointer;
+    @media @smallpc, @tablet, @phone {
+      display: block;
+    }
+  }
+}
+//////////////////////////////////////////////////////
+
+.menu-right-top {
+  //background:#979a91;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-flow: row wrap;
+
+  img {
+    max-width: 200px;
+    min-width: 100px;
+    display: block;
+    //background: #71746B;
+    @media @smallpc, @tablet, @phone {
+      width: 20vw;
+    }
+  }
+
+  div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+
+    p {
+      display: inline-block;
+      @media @phone {
+        display: none;
+      }
+    }
+  }
+
+  i {
+    font-size: 32px;
+    display: none;
+    cursor: pointer;
+    @media @smallpc, @tablet, @phone {
+      display: block;
+    }
+  }
+}
+//////////////////////////////////////////////////////
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  padding: 10px 0;
+  @media @smallpc, @tablet, @phone {
+    display: none;
+    flex-flow: column wrap;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    margin-top: 40px;
+    max-width: 400px;
+  }
+
+  li {
+    padding: 5px 10px;
+    list-style: none;
+    @media @smallpc, @tablet, @phone {
+      padding: 7px 20px;
+    }
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 600;
+      @media @smallpc, @tablet, @phone {
+        color: #000;
+      }
+    }
+  }
+}

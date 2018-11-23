@@ -1,0 +1,122 @@
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.switch-tabs-content {
+  max-width: 100%;
+}
+
+ul.switch-tabs-nav {
+  position: relative;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  background: #e1e2e7;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+ul.switch-tabs-nav li {
+  display: block;
+  line-height: 1em;
+  margin-bottom: -1px;
+}
+
+ul.switch-tabs-nav li a {
+  display: block;
+  padding: 20px 10px;
+  max-width: 200px;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #444;
+}
+
+ul.switch-tabs-nav li a i{
+  margin-right: 10px;
+  color: #b5b5b5;
+}
+
+ul.switch-tabs-nav li a:focus {
+  box-shadow: none !important;
+}
+
+ul.switch-tabs-nav li:first-child {
+}
+
+ul.switch-tabs-nav li:hover,
+ul.switch-tabs-nav li:focus {
+  background-color: #fff;
+}
+
+ul.switch-tabs-nav li.active a i,
+ul.switch-tabs-nav li.active a{
+  background-color: #fff;
+  color: #00C322;
+  font-weight: 800;
+}
+
+
+ul.switch-tabs-nav.switch-tabs-white li {
+  background-color: #fff;
+}
+
+ul.switch-tabs-nav.switch-tabs-white li a:hover,
+ul.switch-tabs-nav.switch-tabs-white li a:focus {
+}
+
+ul.switch-tabs-nav.switch-tabs-borderless {
+  border-bottom: 0;
+}
+
+ul.switch-tabs-nav.switch-tabs-borderless li {
+  border-bottom: 1px solid #ddd;
+}
+
+ul.switch-tabs-nav.switch-tabs-borderless li.active {
+  border-bottom: 1px solid transparent;
+}
+
+ul.switch-tabs-nav.rtl li {
+  float: right;
+  border-right: 0;
+}
+
+ul.switch-tabs-nav.rtl li:first-child {
+}
+
+ul.switch-tabs-nav.rtl.responsive li {
+}
+
+ul.switch-tabs-nav.responsive li {
+  float: none;
+  display: block;
+}
+
+.switch-tabs-body {
+  position: relative;
+  display: block;
+  padding: 10px 0 0 0;
+  border-top: 1px solid transparent;
+}
+
+.switch-tabs-body .switch-content {
+  position: relative;
+  display: none;
+  width: 100%;
+}
+.switch-tabs-body .switch-content:nth-child(1) {
+  display: block;
+}
+
+.switch-tabs-body.borderless {
+  border: 0;
+}

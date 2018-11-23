@@ -4,30 +4,56 @@ include 'sedit/core.php';
 register_nav_menus( array(
 	'top'    => 'Menu główne'
 ) );
-$sedit = new seditSlider();
-$sedit->addSlider();
-$tabs = [
+// $sedit = new seditSlider();
+// $sedit->addSlider();
+$sedit->pagesData([
 
-	'Podstawowe dane' => [
-		'Logo' => [
-			'name' => 'logo',
-			'type' => 'image',
-			'description' => 'Główne logo dla szablonu'
-		],
-		'Opis strony' => [
-			'name' => 'opis',
-			'type' => 'textarea',
-			'description' => 'Opis zawierający kluczowe frazy'
+	 [
+		'page' => 'HOME',
+		'title' => 'jakiś tytuł',
+		'description' => 'główny opis dla sekcji',
+		'dashicons' => 'dashicons-admin-tools',
+		'atoms' => [
+			  [
+				'title' => 'Imię',
+				'name' => 'logdo',
+				'type' => 'images',
+				'placeholder' => 'Imię i nazwisko',
+				'description' => 'Proszę uzupełnić dane',
+				],[
+				'title' => 'Zdjęcie',
+				'name' => 'foto',
+				'type' => 'input',
+				'placeholder' => 'input',
+				'description' => 'Kliknij aby wybrać z biblioteki mediów.'
+				],[
+				'title' => 'Zdjęcie',
+				'name' => 'foto',
+				'type' => 'title',
+				'placeholder' => 'input',
+				'description' => 'Kliknij aby wybrać z biblioteki mediów.'
+				],[
+				'title' => 'Zdjęcie',
+				'name' => 'foto',
+				'type' => 'imagess',
+				'placeholder' => 'input',
+				'description' => 'Kliknij aby wybrać z biblioteki mediów.'
+				]
 			]
-		],
+	 ],
 
-	'Testowy moduł' => [
-		'mod1' => [
-			'name' => 'googlemap',
-			'type' => 'module:google'
+	 [
+		'page' => 'Google maps',
+		'title' => 'jakiś tytuł',
+		'description' => 'główny opis dla sekcji',
+		'atoms' => [
+			'Google' => [
+				'name' => 'googlecddss',
+				'type' => 'module:google',
+				'placeholder' => 'Imię i nazwisko',
+				'description' => 'Proszę uzupełnić dane'
+				]
 			]
-		]
-];
+	]
 
-$sedit = new seditTabs();
-$sedit->pageTabsData($tabs);
+]);
