@@ -1,7 +1,7 @@
 # SEEDIT THEME
 _wersja 1.0 (stabilna)_
 
-Czysty szablon przygotowany do użycia z wtyczką `sedit`
+Czysty szablon przygotowany do użycia z wtyczką `sedit` https://github.com/piotrseed/sedit
 
 
 ## Instalacja
