@@ -1,11 +1,10 @@
 <?php
 include 'sedit/core.php';
+//include 'module/seditNews.php';
 
-register_nav_menus( array(
-	'top'    => 'Menu główne'
-) );
 // $sedit = new seditSlider();
 // $sedit->addSlider();
+
 $sedit->pagesData([
 
 	 [

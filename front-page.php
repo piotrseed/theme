@@ -73,7 +73,7 @@ get_header();
   <div class="wrapp">
     <div class="seditBlock">
       <div class="block">
-        <h1>Zastosowanie</h1>
+        <h1></h1>
         <span></span>
       </div>
       <div class="block"></div>

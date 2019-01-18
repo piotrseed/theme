@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tiled WMS Wrapping</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script>
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+
+  </head>
+  <body>
+    <div id="map" style="width:1500px;height:800px;" class="map"></div>
+    <script>
+      import Map from 'ol/Map.js';
+      import View from 'ol/View.js';
+      import TileLayer from 'ol/layer/Tile.js';
+      import OSM from 'ol/source/OSM.js';
+      import TileWMS from 'ol/source/TileWMS.js';
+
+
+      var layers = [
+        new TileLayer({
+          source: new OSM()
+        }),
+        new TileLayer({
+          source: new TileWMS({
+            url: 'https://ahocevar.com/geoserver/ne/wms',
+            params: {'LAYERS': 'ne:ne_10m_admin_0_countries', 'TILED': true},
+            serverType: 'geoserver'
+          })
+        })
+      ];
+      var map = new Map({
+        layers: layers,
+        target: 'map',
+        view: new View({
+          center: [0, 0],
+          zoom: 1
+        })
+      });
+    </script>
+  </body>
+</html>
