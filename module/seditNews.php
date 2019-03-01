@@ -1,10 +1,10 @@
 <?php
 ///////CUSTOM POST///////////////////////////////////////////
-function bazawiedzy() {
+function news() {
     $labels = array(
         'name'                => 'Artykuły',
         'singular_name'       => 'Artykuł',
-        'menu_name'           => 'Baza wiedzy',
+        'menu_name'           => 'Artykuły',
         'parent_item_colon'   => 'Artykuły',
         'all_items'           => 'Wszystkie artykuły',
         'view_item'           => 'Zobacz artykuł',
@@ -37,14 +37,14 @@ function bazawiedzy() {
         'capability_type'     => 'page',
     );
     // Registering your Custom Post Type
-    register_post_type( 'bazawiedzy', $args );
+    register_post_type( 'news', $args );
 }
-add_action( 'init', 'bazawiedzy', 10, 0);
+add_action( 'init', 'news', 10, 0);
 /////CUSTOM TAXONOMY/////////////////////////////////////////////
-function bazawiedzy_taxtaxonomy() {
+function news_taxtaxonomy() {
 flush_rewrite_rules();
 $labels = array(
-    'name'                       => 'Kategorie',
+    'name'                       => 'Kategorie artykułów',
     'singular_name'              => 'Kategorie',
     'menu_name'                  => 'Kategorie',
     'all_items'                  => 'Wszystkie',
@@ -59,7 +59,7 @@ $labels = array(
     'not_found'                  => 'Lista jest pusta',
 );
 $rewrite = array(
-        'slug'                       => 'bazawiedzy',
+        'slug'                       => 'kategorie',
         'with_front'                 => false,
         'hierarchical'               => true,
     );
@@ -73,12 +73,12 @@ $args = array(
     'show_tagcloud'              => true,
     'rewrite'                    => $rewrite,
 );
-register_taxonomy( 'tax_bazawiedzy', array( 'bazawiedzy' ), $args );
+register_taxonomy( 'tax_news', array( 'news' ), $args );
 }
-add_action( 'init', 'bazawiedzy_taxtaxonomy', 10, 0 );
+add_action( 'init', 'news_taxtaxonomy', 10, 0 );
 /////////////////////////////////////////////////////////////////////////////////
 //Listowanie produktów
-function listBazawiedzy($taxonomy, $data){
+function listNews($taxonomy, $data){
 	$parent_terms = get_terms($taxonomy, array(
 		'parent' => 0,
 		'orderby' => 'slug',
