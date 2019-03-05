@@ -24,7 +24,7 @@ $sedit->tabsData([
                 'name' => 'sklep',
                 'type' => 'input',
                 'placeholder' => 'http://...',
-                'description' => 'Link do sklepu VDF',
+                'description' => 'Link do sklepu',
             ], [
                 'title' => 'Nasi partnerzy',
                 'name' => 'logopartner',
@@ -108,7 +108,7 @@ $sedit->tabsData([
                 'title' => 'Adres email',
                 'name' => 'email1',
                 'type' => 'input',
-                'placeholder' => 'biuro@vdfstrona.pl',
+                'placeholder' => 'biuro@strona.pl',
                 'description' => 'Główny adres email',
             ],
 
