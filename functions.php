@@ -120,6 +120,13 @@ $sedit->tabsData([
         'dashicons' => 'dashicons-admin-site',
         'atoms' => [
             [
+                'title' => 'Współrzędne na mapie',
+                'name' => 'googlemapxy',
+                'type' => 'input',
+                'placeholder' => '50.041847, 21.999521',
+                'description' => 'Google maps',
+            ],
+            [
                 'title' => 'Google maps API KEY',
                 'name' => 'googlemapapi',
                 'type' => 'input',

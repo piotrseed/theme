@@ -2,14 +2,6 @@
   <div class="wrapp">
     <div class="seditBlock">
       <div class="block">
-        <?php assetImg('logo1.png');?>
-        <p><i class="fas fa-home"></i> aaaa</p>
-        <p><i class="fas fa-phone"></i> aaaa</p>
-        <p><i class="fas fa-envelope"></i> aaaa</p>
-        <p><i class="far fa-clock"></i> aaaa</p>
-        <a class="seditBtn" href="<?php echo get_permalink(get_page_by_path('kontakt')); ?>">SZCZEGÓŁY</a>
-      </div>
-      <div class="block">
         <div id="map"></div>
       </div>
     </div>
@@ -20,7 +12,6 @@
 <section class="sectionFooter">
   <div class="wrapp">
     <div class="seditBlock">
-      <div class="block"><p>© VDF Group 2019</p></div>
       <div class="block"><p>Projekt i realizacja: <a href="http://bigcom.pl">BigCom</a></p></div>
     </div>
   </div>
@@ -99,6 +90,6 @@ function initMap() {
 <script>
   AOS.init();
 </script>
-<script src="http://localhost:49902/livereload.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
